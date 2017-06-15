@@ -12,6 +12,11 @@ describe('testing arithmetic: ', () => {
       let result = arithmetic.add(2, 2);
       expect(result).toEqual(4);
     });
+
+    it('should return 4 error: ', () => {
+      let result = arithmetic.add('sup', 2);
+      expect(result).toBe(null);
+    });
   });
 
   describe('testing sub: ', () => {
@@ -19,14 +24,10 @@ describe('testing arithmetic: ', () => {
       let result = arithmetic.sub(6, 2);
       expect(result).toEqual(4);
     });
-  });
-});
 
-describe('testing greet: ', () => {
-  describe('testing greet: ', () => {
-    it('should return "Hello, Munir"', () => {
-      let result = greet('Munir');
-      expect(result).toEqual('Hello, Munir');
+    it('should return string error: ', () => {
+      let result = arithmetic.sub('hey', 2);
+      expect(result).toBe(null);
     });
   });
-})
+});
